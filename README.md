@@ -35,7 +35,23 @@ DAPT_public/
 | `dino/weights/dapt_dino_ade20k.pth` | DINOv2-B/14 reg4 | ADE20K，150 类，最终第 10,000 步权重 |
 | `dino/weights/dapt_dino_nyuv2.pth` | DINOv2-B/14 reg4 | NYUv2，41 个输出通道（40 个语义类），最终第 6,000 步权重 |
 
-三份权重均包含完整编码器、DAPT 解码器和任务头。导出时只去除训练记录，参数数值和精度保持不变；无需另外下载 MiDaS/DINOv2 预训练权重。文件大小、SHA256、模型设置和已测试环境见 `weights_manifest.json`。`.pth` 已配置 Git LFS 属性。
+三份权重均包含完整编码器、DAPT 解码器和任务头。导出时只去除训练记录，参数数值和精度保持不变；无需另外下载 MiDaS/DINOv2 预训练权重。文件大小、SHA256、模型设置和已测试环境见 `weights_manifest.json`。
+
+### 下载
+
+权重合计约 2.27 GiB，超过 GitHub 单文件 100 MiB 的上限，因此**不随仓库分发**，而是作为 GitHub Release 附件发布：
+
+<https://github.com/JiGuiHUST/DAPT/releases/tag/v1.0.0>
+
+下载后按文件名放入对应目录即可，无需解压：
+
+| 附件 | 放置路径 |
+|---|---|
+| `dapt_monodepth.pth` | `non_dino/weights/` |
+| `dapt_dino_ade20k.pth` | `dino/weights/` |
+| `dapt_dino_nyuv2.pth` | `dino/weights/` |
+
+可用 `weights_manifest.json` 中的字节数与 SHA256 校验下载完整性。`.gitattributes` 仍将 `*.pth` 标记为 Git LFS 属性，便于日后改用 LFS 托管。
 
 ## 安装与生成 demo
 
