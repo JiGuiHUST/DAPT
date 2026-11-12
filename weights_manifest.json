@@ -1,0 +1,71 @@
+{
+  "format_version": 1,
+  "weights": [
+    {
+      "file": "non_dino/weights/dapt_monodepth.pth",
+      "bytes": 1404432798,
+      "sha256": "65bc0cf1e316d9b871f6e761e7f4f999be410627da6996e086d05261fc13c6ca",
+      "source_sha256": "a9c36baab32a47d98c9c7da40bbafbddbaabb8072b2b2b64694f3364a3f60383",
+      "tensor_count": 464,
+      "parameters_and_buffers": 350797937,
+      "exact_tensor_equality": true,
+      "format_version": 1,
+      "task": "monodepth",
+      "encoder": "ViT-L/16",
+      "bypass_type": "v2",
+      "full_encoder_included": true,
+      "classes": null,
+      "selection": "single_global_best",
+      "step": null,
+      "selected_candidate": "joint_polish_1200"
+    },
+    {
+      "file": "dino/weights/dapt_dino_ade20k.pth",
+      "bytes": 518059460,
+      "sha256": "661c11c917c55aceda86e9238b50094b9dba4d7665129d8ae1d9aeba87222879",
+      "source_sha256": "34a1cea3b2968a15800432bcde310fd7dfe0cfe27b6e7d53979c8563015e6169",
+      "tensor_count": 418,
+      "parameters_and_buffers": 129212934,
+      "exact_tensor_equality": true,
+      "format_version": 1,
+      "task": "ade20k",
+      "encoder": "DINOv2-B/14 reg4",
+      "bypass_type": "v2",
+      "full_encoder_included": true,
+      "classes": 150,
+      "selection": "final_training_step",
+      "step": 10000,
+      "selected_candidate": null
+    },
+    {
+      "file": "dino/weights/dapt_dino_nyuv2.pth",
+      "bytes": 517834910,
+      "sha256": "9a2b3d808f0ccd964292e41d99bd91f4344300b651d63e57af90260795859221",
+      "source_sha256": "e10df03e9e32d9bd317e23eb43601a3ab14f364582e573bc55b5b7b3ba99039b",
+      "tensor_count": 418,
+      "parameters_and_buffers": 129156908,
+      "exact_tensor_equality": true,
+      "format_version": 1,
+      "task": "nyuv2",
+      "encoder": "DINOv2-B/14 reg4",
+      "bypass_type": "v2",
+      "full_encoder_included": true,
+      "classes": 41,
+      "selection": "final_training_step",
+      "step": 6000,
+      "selected_candidate": null
+    }
+  ],
+  "tested_environment": {
+    "python": "3.10.20",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "timm": "1.0.28",
+    "numpy": "2.2.6",
+    "Pillow": "12.3.0",
+    "huggingface-hub": "1.26.0",
+    "safetensors": "0.8.0",
+    "PyYAML": "6.0.3",
+    "tqdm": "4.70.1"
+  }
+}

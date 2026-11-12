@@ -1,0 +1,50 @@
+{
+  "state": "passed",
+  "tasks": [
+    {
+      "state": "passed",
+      "task": "monodepth",
+      "reference_logit_max_abs_error": 0.0,
+      "strict_full_checkpoint": true,
+      "separate_pretrain_not_needed": true,
+      "default_fig_input_and_weights": true,
+      "launch_from_other_directory": true,
+      "output_size": [
+        448,
+        588
+      ],
+      "output_files": 4,
+      "classes_present": null
+    },
+    {
+      "state": "passed",
+      "task": "ade20k",
+      "reference_logit_max_abs_error": 0.0,
+      "strict_full_checkpoint": true,
+      "separate_pretrain_not_needed": true,
+      "default_fig_input_and_weights": true,
+      "launch_from_other_directory": true,
+      "output_size": [
+        448,
+        448
+      ],
+      "output_files": 5,
+      "classes_present": 9
+    },
+    {
+      "state": "passed",
+      "task": "nyuv2",
+      "reference_logit_max_abs_error": 0.0,
+      "strict_full_checkpoint": true,
+      "separate_pretrain_not_needed": true,
+      "default_fig_input_and_weights": true,
+      "launch_from_other_directory": true,
+      "output_size": [
+        448,
+        588
+      ],
+      "output_files": 5,
+      "classes_present": 21
+    }
+  ]
+}
